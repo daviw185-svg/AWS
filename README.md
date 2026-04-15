@@ -28,3 +28,17 @@ computação, armazenamento, rede, banco de dados e outros recursos de TI e ferr
 
 - <img width="1474" height="523" alt="Screenshot 2026-04-13 152943" src="https://github.com/user-attachments/assets/b4d3f8c9-bddc-4ff8-bd95-b0b589bda5fe" />
 
+# O QUE É O "IAM"?
+
+- O "Identity and Acess Management" é um serviçp da AWS que permite definir usuários e os tipos de dados que eles podem ter acesso.
+- Usuário do IAM: Pessoa ou aplicativoque se cadastrar e autenticar em uma conta da AWS;
+- Grupo do IAM: Um conjuntom de usuários que recebem uma autorização idêntica;
+- Política do IAM: O documento que define quais recursos podem ser acessados e o nível de acesso a cada recurso. Esse tipo de permissão pode ser para um usuário, um grupo ou à uma função. Com um "Allow", alguma dessas entidades estão permitidas acessar, já o "Deny" está bloqueando o acesso. Veja na página abaixo:
+
+ <img width="1239" height="422" alt="Screenshot 2026-04-15 153440" src="https://github.com/user-attachments/assets/309a7daf-a7b4-430e-b5e2-64f5c4c28902" />
+<img width="825" height="351" alt="Screenshot 2026-04-15 153732" src="https://github.com/user-attachments/assets/b6a6a9d4-4e51-4529-a641-0ea80c3947a4" />
+
+- Função do IAM: Mecanismo útil para conceder um conjunto de permissões para fazer solicitacões de servico da AWS. A função fornece credenciais de segurança
+temporárias;
+
+- Princípio do Privilégio Mínimo: Conjunto mínimo de permissões necessárias para executar uma tarefa específica
