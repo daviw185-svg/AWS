@@ -5,6 +5,8 @@
 Plataforma de nuvem segura que oferece um amplo conjunto de produtos globais baseados na nuvem. A AWS oferece acesso sob demanda a recursos de
 computação, armazenamento, rede, banco de dados e outros recursos de TI e ferramentas de gerenciamento.
 
+![alt text](<Screenshot 2026-04-13 152840.png>)
+
 # VANTAGENS
 
 - Escalabilidade automática para lidar com mudanças de demanda
