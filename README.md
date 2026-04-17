@@ -1,5 +1,10 @@
 # AWS
 
+# Conceito de "Computação em Nuvem"
+
+Computação em nuvem é a entrega sob demanda de poder computacional, banco de dados, armazenamento, aplicativos e outros recursos de TI pela Internet com uma definição de preço conforme o uso. Com ela, a sua estrutura fundamental(infraestrutura) passa a ser usada como um software (o sistema em si) e não como hardware (componentes físicos). Por ser um software, conta com as vantagens s=em suas soluções mais flexibilidade, economia, torna recursos temporários e descartáveis. Diferente da TI tradicional, a AWS possui grupos de segurança, sistema de restrição de dados aos funcionários (IAM), utiliza um balanceador de rede, ao invés de roteadores, 
+ipeline de rede e switches como os tradicionais usam, e no armazenamento de bancos de dados são utilizados servidores da própria Amazon. Além disso, quem usa esse tipo de computação só irá pagar somente pelo o que consumir, ao contrário do tradicional (hardware) que tem um alto custo, a velocidade e a agilidade é aumentada, e é possível ter um alcance global. 
+
 # O QUE É AWS?
 
 Plataforma de nuvem segura que oferece um amplo conjunto de produtos globais baseados na nuvem. A AWS oferece acesso sob demanda a recursos de
@@ -28,6 +33,24 @@ computação, armazenamento, rede, banco de dados e outros recursos de TI e ferr
 
 - <img width="1474" height="523" alt="Screenshot 2026-04-13 152943" src="https://github.com/user-attachments/assets/b4d3f8c9-bddc-4ff8-bd95-b0b589bda5fe" />
 
+# Maneiras de se interagir com a AWS 
+
+- Console de Gerenciamento da AWS: o console fornece uma interface gráfica avançada para a maioria dos recursos oferecidos pela AWS. (Observação: às vezes os recursos novos ainda não têm todas as capacidades embutidasno console na data de lançamento).
+ 
+- Interface da linha de comando da AWS (CLI da AWS):a CLI da AWS fornece um conjunto de utilitários que podem ser executados a partir de um script de comando no Linux, macOSou Microsoft Windows.
+
+- Software DevelopmentKits (SDKs):a AWS fornece pacotes que permitem acessar a AWS em uma variedade de linguagens de programação populares. Isso facilita o uso da AWS em seus aplicativos existentes e permite a criação de aplicativos para implantar e monitorar sistemas complexos inteiramente por meio de código.
+
+# Fundamentos da definição de preço
+
+<img width="919" height="393" alt="Screenshot 2026-04-17 151705" src="https://github.com/user-attachments/assets/2f90db43-7884-482e-b722-1b92112bb3a9" />
+
+<img width="927" height="448" alt="image" src="https://github.com/user-attachments/assets/f371f5d1-c4ab-4725-aa47-94b1301d52b9" />
+
+<img width="923" height="512" alt="image" src="https://github.com/user-attachments/assets/56329c6e-22d8-4e7e-ab71-e5a3b5ee9846" />
+
+
+
 # O QUE É O "IAM"?
 
 - O "Identity and Acess Management" é um serviçp da AWS que permite definir usuários e os tipos de dados que eles podem ter acesso.
@@ -42,3 +65,17 @@ computação, armazenamento, rede, banco de dados e outros recursos de TI e ferr
 temporárias;
 
 - Princípio do Privilégio Mínimo: Conjunto mínimo de permissões necessárias para executar uma tarefa específica
+
+# A Infraestrutura global da AWS
+
+- REGIÕES DA AWS:
+Uma Região AWS é uma área geográfica. A replicação de dados entre Regiões é controlada pelo usuário.  Uma Região normalmente consiste em duas ou mais Zonas de Disponibilidade. Para alcançar tolerância a falhas e estabilidade, as regiões são isoladas umas das outras
+
+- ZONA DE DISPONIBILIDADES:
+Cada Zona de Disponibilidade oferece a capacidade de operar aplicativos e bancos de dados mais altamente disponíveis, tolerantes a falhas e dimensionáveis do que seria possível em um único data center. Cada Zona de Disponibilidade pode incluir vários data centers (normalmente três) e, em dimensão integral, eles podem incluir centenas de milhares de servidores. Todas as Zonas de Disponibilidade são interconectadas com redes de alta largura de banda e baixa latência (determina a velocidade de resposta da conexão: quanto menor, melhor) por meio de fibra dedicada totalmente redundante que fornece alta vazão entre as Zonas de Disponibilidade;
+
+- DATACENTERS DA AWS:
+Os data centers da AWS são projetadospara segurança. Os data centers são onde os dadosresidem e o processamento dedados ocorre.  A Amazon opera data centers de última geração e altamente disponíveis. Embora sejam raras, podem ocorrer falhas que afetam a disponibilidade das instâncias no mesmo local. Se você hospedar todas as suas instâncias em um único local afetado por essa falha, nenhuma delas estará disponível.
+
+- PONTOS DE PRESENÇA:
+Consiste em locais de bordaeum número muito menor de caches de borda regionais. Usada com oAmazonCloudFront que é uma rede de entrega de conteúdo, usada para distribuir conteúdo aos usuários finais para reduzir a latência. 
