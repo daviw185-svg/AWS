@@ -78,4 +78,28 @@ Cada Zona de Disponibilidade oferece a capacidade de operar aplicativos e bancos
 Os data centers da AWS são projetadospara segurança. Os data centers são onde os dadosresidem e o processamento dedados ocorre.  A Amazon opera data centers de última geração e altamente disponíveis. Embora sejam raras, podem ocorrer falhas que afetam a disponibilidade das instâncias no mesmo local. Se você hospedar todas as suas instâncias em um único local afetado por essa falha, nenhuma delas estará disponível.
 
 - PONTOS DE PRESENÇA:
-Consiste em locais de bordaeum número muito menor de caches de borda regionais. Usada com oAmazonCloudFront que é uma rede de entrega de conteúdo, usada para distribuir conteúdo aos usuários finais para reduzir a latência. 
+Consiste em locais de bordaeum número muito menor de caches de borda regionais. Usada com oAmazonCloudFront que é uma rede de entrega de conteúdo, usada para distribuir conteúdo aos usuários finais para reduzir a latência.
+
+# Amazon EC2
+
+- EC2 é um serviço de Infraestrutura como Serviso (IaaS) da AWS;
+- Permite provisionar máquinas virtuais chamadas instâncias;
+- Componentes Principais:
+  - EC2 (Instância) - Máquina Virtual
+  - EBS (Elastic Block Store) - Serviço de armazenamento em blocos de alta performance, como um pen-drive
+  - ELB (Elastic Load Balancing) - Disco persistente conectado via rede, confirgurar o quanto de rede será utilizado em relação a demanda
+
+- Configuração de EC2
+  - Escolhas de provisionaento:
+     - Sistema Operacional: Linux, Windows, MacOS;
+     - Tamanho da instância: número de vCPUs e RAM;
+     - Armazenamento: EBS, EFS, Instance Store(memória temporária)
+     - Interface de rede, IP público ou privado
+     - Segurança: grupos de segurança(firewall) e pares de chaves SSH
+     - Scripts de Inicialização (EC2 User Data) - executam comandos no primeiro boot (instalação de pacotes, atualizações, configuração de aplicações)
+
+- AMI (Imagem de máquina da Amazon)
+ - É um modelo usado para criar uma instância do EC2 (que é uma máquina virtual, ou VM, executada na Nuvem AWS)
+ - Contém um sistema operacional Windows ou Linux
+ - Muitas vezes, ele também tem software pré-instalado, uma base pronta
+
