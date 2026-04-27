@@ -102,3 +102,75 @@ Consiste em locais de bordaeum número muito menor de caches de borda regionais.
  - Contém um sistema operacional Windows ou Linux
  - Muitas vezes, ele também tem software pré-instalado, uma base pronta
 
+## Otimização de custos do Amazon EC2
+
+A Amazon oferece diferentes modelos de preço que você pode escolher para executar instâncias do EC2. 
+- O faturamento por segundo só está disponível para instâncias sob demanda, instâncias reservadas e instâncias spot que executa mo Amazon Linux ou o Ubuntu.
+- Instâncias sob demanda estão qualificadas para o nível gratuito da AWS (https://aws.amazon.com/free/). Elas têm o menor custo inicial e a maior flexibilidade. Não há compromissos antecipados nem contratos de longo prazo. Isso é ótimo para aplicações com cargas de trabalho breves, com picos ou imprevisíveis. 
+- Os hosts dedicados são servidores físicos com a capacidadedas instâncias dedicadas para seu uso. Eles permitem que você use suas licenças de software existentes por soquete, por núcleo ou por licenças do software VM, como para Microsoft Windows ou Microsoft SQL Server. 
+- Instâncias dedicadas são instâncias executadas em uma nuvem privada virtual (VPC) em hardware dedicadoa um único cliente. Elas são isoladas fisicamente no nível de hardware de host das instâncias pertencentes a outras contas da AWS. 
+- A instância reservada permite que você reserve capacidade computacional por um período de 1 ou 3 anos com custos de execução por hora mais baixos. O preço de uso com desconto é fixo enquanto você é o proprietário da instância reservada. Se você espera uso consistente e pesado, eles podem fornecer economias substanciais em comparação com as instâncias sob demanda.
+- As instâncias reservadas programadas permitem adquirir reservas de capacidade que se repetem diariamente, semanalmente ou mensalmente, com uma duração especificada, pelo período de um ano. Você paga pelo período de programação das instâncias, mesmos e não usá-las
+- As instâncias spot permitem que você faça sugestões de preço em instâncias do EC2 nãou tilizadas, o que pode reduzir seus custos do significativamente. O preço por hora de uma instância spot varia de acordo com a oferta e a demanda. A instância spot é executada sempre que sua sugestão de preço excede o preço de mercado atual.
+
+Para otimizar custos, você deve considerar quatro motivadores consistentes e potentes:
+- Tamanho certo: escolha o equilíbrio certo dos tipos de instância. Observe quando os servidores podem ser dimensionados para baixo ou desativados e ainda atendem aos seus requisitos de desempenho.
+- Aumento da elasticidade: projete suas implantações para reduzir a capacidade de servidor ociosa com implantações elásticas, como aquelas que usam auto scaling para lidar com picos de carga.
+- Modelo de definição de preço ideal: reconheça as opções de definição de preço disponíveis. Analise seus padrões de uso para que você possa executar instâncias do EC2 com a combinação correta de opções de definição de preço.
+- Otimizar opções de armazenamento: Analise os requisitos de armazenamento de suas implantações. Reduza a sobrecarga de armazenamento não utilizado quando possível e escolha opções de armazenamento mais econômicas se elas ainda conseguirem atender aos seus requisitos de desempenho de armazenamento.
+
+## Serviços de contêiner
+
+Os contêineres são um método de virtualização de sistema operacional que permite executar um aplicativo e suas dependências em processos com recursos isolados. Os contêineres permitem empacotar facilmente o código, as configurações e as dependências de um aplicativo em componentes básicos fáceis de usar que oferecem consistência ambiental, eficiência operacional, produtividade de desenvolvedores e controle de versões.
+
+ Benefícios:
+- Repetível
+- Ambientes autônomos
+- O software é executado da mesma forma em diferentes ambientes
+- Laptop, teste, produção do desenvolvedor.
+- Lançamento e interrupção ou encerramento mais rápido do que máquinas virtuais
+
+### Docker
+O Docker é uma plataforma de software que empacota software (como aplicativos) em contêineres.
+O Docker é instalado em cada servidor que hospedará contêineres e fornece comandos simples que você pode usar para criar, iniciar ou interromper contêineres.
+
+O Docker é melhor empregado como uma solução quando você deseja:
+- Padronizar ambientes
+- Reduzir conflitos entre pilhas de linguagem e versões
+- Usar contêineres como serviço
+- Executar microsserviços com implantações de código padronizadas
+- Exigir portabilidade para processamento de dados
+
+## Amazon Elastic Container Service (Amazon ECS)
+
+O Amazon Elastic Container Service (Amazon ECS) é um serviço de gerenciamento de contêineres altamente escalável e de alto desempenho que dá suporte a contêineres do Docker.
+O Amazon ECS permite que você execute facilmente aplicativos em um cluster gerenciado de instâncias do Amazon EC2.
+Os recursos essenciais do Amazon ECS incluem a capacidade de:
+- Executar até dezenas de milhares de contêineres do Docker em segundos
+- Monitorar a implantação de contêineres
+- Gerenciar o estado do cluster que executa os contêineres
+- Programe contêineres usando um programador integrado ou um programador de terceiros (por exemplo, Apache Mesos ou Blox)
+
+Para preparar o aplicativo para execução no Amazon ECS, você cria uma definição de tarefa que é um arquivo de texto que descreve um ou mais contêineres, até um máximo de dez, que formam o aplicativo. Pode ser considerada como um esquema de seu aplicativo. As definições de tarefa especificam parâmetros para o aplicativo, por exemplo, quais contêineres usar, quais portas devem ser abertas para o aplicativo e quais volumes de dados devem ser usados com os contêineres na tarefa.
+
+## Amazon Elastic Kubernetes Service (Amazon EKS)
+
+O Amazon Elastic Kubernetes Service (Amazon EKS) é um serviço gerenciado de Kubernetes que facilita a execução de Kubernetes na AWS, eliminando a necessidade de instalar, operar e manter o seu próprio plano de controle do Kubernetes. A conformidade do Amazon EKS com o Kubernetes é certificada. Portanto, aplicações existentes executadas na versão mais recente do Kubernetes são compatíveis com o Amazon EKS.
+
+## Amazon Elastic Container Registry (Amazon ECR)
+
+O Amazon Elastic Container Registry (Amazon ECR) é um registro de contêineres do Docker totalmente gerenciado que permite que desenvolvedores armazenem, gerenciem e implantem facilmente imagens de contêiner do Docker. Ele é integrado ao Amazon ECS, para que você possa armazenar, executar e gerenciar imagens de contêiner para aplicações executadas no Amazon ECS. Basta especificar o repositório do Amazon ECR na Definição de Tarefas que o Amazon ECS recuperará as imagens apropriadas para os aplicativos.
+
+## AWS Lambda
+
+<img width="797" height="332" alt="Screenshot 2026-04-27 181542" src="https://github.com/user-attachments/assets/85237faa-772e-4610-bc8d-d1d81dd20141" />
+
+O AWS Lambda é um produto de computação sem servidor orientado a eventos. O Lambda permite executar código sem provisionar ou gerenciar servidores.
+Você cria uma função Lambda, que é o recurso da AWS que contém o código que você carregou Em seguida, você define a função Lambda a ser acionada, seja de forma programada ou em resposta a um evento. Seu código só é executado quando é acionado.
+Você paga apenas pelo tempo de computação consumido- não há cobrança quando o código não está em execução.
+
+<img width="777" height="395" alt="Screenshot 2026-04-27 181630" src="https://github.com/user-attachments/assets/6ad91b27-2823-4c62-bf5e-2088621bb8e3" />
+
+Uma fonte de evento é um serviço da AWS ou aplicativo criado por desenvolvedor que gera eventos que acionam a execução de uma função do AWS Lambda.
+
+<img width="832" height="420" alt="Screenshot 2026-04-27 181918" src="https://github.com/user-attachments/assets/902e0996-3ca0-403a-8127-48b411f5b960" />
