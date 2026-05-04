@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Filmes</title>
+    <link rel="stylesheet" href="server.js">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: blueviolet;
+        }
+        h1 {
+            color: #333;
+        }
+        p{
+            color: yellow;
+        }
+    </style>
+        
+</head>
+<body>
+    <h1> FILMES API </h1>
+    <div id="lista-filmes"> Carregando Filmes...</div>
+    <script>
+        fetch('/api/filmes').then( response => response.json()).then(
+        data => {
+            const resposta = document.getElementById('lista-filmes');
+            resposta.innerHTML = data.map( filme => `
+            <img src="${filme.poster}" alt="${filme.titulo}" width="200px">
+                <p> ${filme.titulo} </p>
+                <p> ${filme.diretor} </p>
+                <hr> 
+            `).join('  ');
+        }).catch(err => console.error('Erro ao carregar no JS', err))
+    </script>
+</body>
+</html>
